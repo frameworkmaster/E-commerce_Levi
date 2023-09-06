@@ -66,20 +66,22 @@ const catalogo = [
 ];
 
 for(const produtoCatalogo of catalogo){
-    const cartaoProduto = `<div id="card-produto-1">
+    const cartaoProduto = `<div class="border-solid border-2 border-indigo-600 w-48 m-2" id="card-produto-${produtoCatalogo.id}">
     <img 
     src="./assets/img/${produtoCatalogo.imagem}" 
     alt="Produto 1 do E-Commerce Levi."
     style="height: 300px"
     />
-    <p>${produtoCatalogo.marca}</p>
-    <p>${produtoCatalogo.nome}</p>
-    <p>${produtoCatalogo.preco}</p>
+    <p>Id: ${produtoCatalogo.id}</p>
+    <p class = 'marca'>Marca: ${produtoCatalogo.marca}</p>
+    <p>Descrição: ${produtoCatalogo.nome}</p>
+    <p>Preço: $${produtoCatalogo.preco}</p>
     <button>Adicionar</button>
+    <p></p>
     </div>`;
 
-    document.getElementById("container-produto").innerHTML += cartaoProduto;
-
+    document.getElementById("container-produto").innerHTML 
+    += cartaoProduto;
 }
 
 
