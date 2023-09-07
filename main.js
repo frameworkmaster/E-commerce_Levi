@@ -1,3 +1,5 @@
+import { inicializarCarrinho } from "./src/menuCarrinho";
+
 const catalogo = [
     { 
         id: 1, 
@@ -66,7 +68,9 @@ const catalogo = [
 ];
 
 for(const produtoCatalogo of catalogo){
-    const cartaoProduto = `<div class="border-solid border-2 border-indigo-600 w-48 m-2" id="card-produto-${produtoCatalogo.id}">
+    const cartaoProduto = 
+    `<div class="border-solid border-2 border-indigo-600 
+    w-48 m-2" id="card-produto-${produtoCatalogo.id}">
     <img 
     src="./assets/img/${produtoCatalogo.imagem}" 
     alt="Produto 1 do E-Commerce Levi."
@@ -83,5 +87,7 @@ for(const produtoCatalogo of catalogo){
     document.getElementById("container-produto").innerHTML 
     += cartaoProduto;
 }
+
+inicializarCarrinho();
 
 
